@@ -21,7 +21,7 @@ const Hero = () => {
           </div>
           <div className="flex-1">
             <img 
-              src="https://source.unsplash.com/random/800x1000?portrait"
+              src="/images/HeroModel.png"
               alt="Sofia Dembitska"
               className="w-full h-auto rounded-lg shadow-xl"
             />

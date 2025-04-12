@@ -4,12 +4,12 @@ import ScrollArrow from './ScrollArrow'
 const categories = ['All', 'People', 'Architecture', 'Moments']
 
 const portfolioImages = [
-  { src: 'https://source.unsplash.com/random/800x600?architecture', category: 'Architecture', className: '' },
-  { src: 'https://source.unsplash.com/random/800x600?building', category: 'Architecture', className: '' },
-  { src: 'https://source.unsplash.com/random/800x600?people', category: 'People', className: 'wide' },
-  { src: 'https://source.unsplash.com/random/800x600?portrait', category: 'Moments', className: 'tall' },
-  { src: 'https://source.unsplash.com/random/800x600?nature', category: 'Moments', className: 'wide' },
-  { src: 'https://source.unsplash.com/random/800x600?street', category: 'People', className: '' },
+  { src: '/images/architecture/danist-soh-dqXiw7nCb9Q-unsplash.jpg', category: 'Architecture', className: '' },
+  { src: '/images/architecture/lance-anderson-QdAAasrZhdk-unsplash.jpg', category: 'Architecture', className: '' },
+  { src: '/images/people/katsiaryna-endruszkiewicz-BteCp6aq4GI-unsplash.jpg', category: 'People', className: 'wide' },
+  { src: '/images/moments/alef-morais-xhVMvxRYs2g-unsplash.jpg', category: 'Moments', className: 'tall' },
+  { src: '/images/moments/alex-alvarez-63YVMrL2d6g-unsplash.jpg', category: 'Moments', className: 'wide' },
+  { src: '/images/people/aiony-haust-owp8uQgoK8U-unsplash.jpg', category: 'People', className: '' },
 ]
 
 const Portfolio = () => {
