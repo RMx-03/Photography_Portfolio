@@ -30,6 +30,7 @@ const About = () => {
             </div>
           </div>
         </div>
+        <ScrollArrow targetId="contact" />
       </div>
 
       {/* Mobile Version */}
@@ -55,8 +56,7 @@ const About = () => {
             Whether I'm working with clients or taking photos for myself, I always put my heart and soul into every project. I'm a perfectionist when it comes to my work, and I go to great lengths to ensure that every detail is just right.
           </p>
         </div>
-      </div>
-      <ScrollArrow targetId="contact" />
+      </div>      
     </div>
   )
 }

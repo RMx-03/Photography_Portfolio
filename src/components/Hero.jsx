@@ -1,4 +1,5 @@
 import { FaInstagram, FaTelegram, FaPinterest } from 'react-icons/fa'
+import ScrollArrow from './ScrollArrow'
 
 const Hero = () => {
   return (
@@ -39,7 +40,8 @@ const Hero = () => {
               />
             </div>
           </div>
-        </div>
+          <ScrollArrow targetId="portfolio" />
+        </div>        
       </div>
 
       {/* Mobile Version */}
