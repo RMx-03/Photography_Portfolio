@@ -115,7 +115,7 @@ const Contact = () => {
 
       {/* Footer */}
       <div className="max-w-6xl mx-auto px-4 mt-20 text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-        <p>© 2024 | all rights reserved</p>
+        <p>© 2025 | all rights reserved</p>
         <p>Created by Rohit Mishra</p>
       </div>
     </div>
