@@ -3,46 +3,51 @@ import ScrollArrow from './ScrollArrow'
 
 const Hero = () => {
   return (
-    <div id="hero" className="min-h-screen flex items-center justify-center relative">
-      <div className="hero-container p-24 flex ">
-        <div className="flex flex-col md:flex-row items-start justify-between h-full">
-          <div className="flex flex-col justify-between h-full">
-            <div>
-              <div className="absolute left-0 top-30 h-[350px] w-[2px] bg-black ml-[80px]" />
-              <p className="text-lg mb-4">Dembitska</p>
-              <div className="vertical-line"></div>
-              <h1 className="text-7xl font-bold mb-8">
-                SOFIA<br />DEMBITSKA
-              </h1>
-            </div>
-            <div className="flex flex-col items-center gap-6">
-              <FaInstagram className="w-6 h-6 cursor-pointer hover:text-gray-300 transition-colors" />
-              <FaTelegram className="w-6 h-6 cursor-pointer hover:text-gray-300 transition-colors" />
-              <FaPinterest className="w-6 h-6 cursor-pointer hover:text-gray-300 transition-colors" />
+    <div id="hero" className="min-h-screen relative mb-24">
+      <div className="hero-container flex items-center">
+        {/* Left Section */}
+        <div className="left-section w-1/2 p-16">
+          <div className="relative">
+            <div className="vertical-line"></div>
+            <div className="flex flex-col items-start gap-8">
+              <p className="text-lg">Dembitska</p>
+              <div className="name-section">
+                <h1 className="text-7xl font-bold hover:text-gray-700 transition-colors">
+                  SOFIA<br />DEMBITSKA
+                </h1>
+                <p className="quote-text ml-32 mt-8 max-w-md">
+                  "Photography is the art of capturing moments that will never happen again and sharing them with the world, creating a timeless connection between the past and the present."
+                </p>
+              </div>
+              <div className="social-icons flex flex-col gap-3 mt-auto">
+                <FaInstagram className="w-6 h-6 cursor-pointer hover:text-gray-700 transition-colors" />
+                <FaTelegram className="w-6 h-6 cursor-pointer hover:text-gray-700 transition-colors" />
+                <FaPinterest className="w-6 h-6 cursor-pointer hover:text-gray-700 transition-colors" />
+              </div>
             </div>
           </div>
-          
-          <div className="flex-1 flex justify-between items-start gap-22">
-            <p className="text-lg max-w-md text-right mt-44">
-              "Photography is the art of capturing moments that will never happen again and sharing them with the world, creating a timeless connection between the past and the present."
-            </p>
+        </div>
+
+        {/* Right Section - Images */}
+        {/* <div className="right-section w-1/2 relative">
+          <div className="images-container">
             <img 
               src="/images/HeroModel3.png"
               alt="Sofia Dembitska"
-              className="w-[500px] h-[500px] object-contain"
+              className="hero-image hero-image-left"
             />
             <img 
               src="/images/HeroModel.png"
               alt="Sofia Dembitska"
-              className="w-[500px] h-auto object-contain"
+              className="hero-image hero-image-middle"
             />
             <img
               src="/images/HeroModel2.png"
               alt="Sofia Dembitska"
-              className="w-[500px] h-auto object-contain"
+              className="hero-image hero-image-right"
             />
           </div>
-        </div>
+        </div> */}
       </div>
       <ScrollArrow targetId="portfolio" />
     </div>

@@ -9,11 +9,11 @@ const About = () => {
             <img 
               src="/images/AboutModel.jpg" 
               alt="About Sofia"
-              className="w-full h-auto rounded-lg"
+              className="w-[450px] h-[600px] rounded-lg"
             />
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-2xl font-bold mb-8">ABOUT ME</h2>
+            <h2 className="text-2xl text-white font-bold mb-8">ABOUT ME</h2>
             <div className="space-y-6 text-gray-300">
               <p>
                 Hi there, my name is Sofia and I am a photographer. I've been passionate about photography since I was a child, and it's a love that has only grown stronger with time.
