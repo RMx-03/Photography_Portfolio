@@ -20,7 +20,7 @@ body {
 .hero-container {
   background: rgba(185,185,185,255);
   backdrop-filter: blur(10px);  
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgb(255, 255, 255);
   min-height: 80vh;
   width: 90%;
   max-height: 90vh;

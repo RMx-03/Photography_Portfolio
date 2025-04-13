@@ -29,14 +29,14 @@ const Hero = () => {
         </div>
 
         {/* Right Section - Images */}
-        {/* <div className="right-section w-1/2 relative">
+        <div className="right-section w-1/2 relative">
           <div className="images-container">
             <img 
-              src="/images/HeroModel3.png"
+              src="/images/Model.png"
               alt="Sofia Dembitska"
-              className="hero-image hero-image-left"
+              className="hero-image  hero-image-center"
             />
-            <img 
+            {/* <img 
               src="/images/HeroModel.png"
               alt="Sofia Dembitska"
               className="hero-image hero-image-middle"
@@ -45,9 +45,9 @@ const Hero = () => {
               src="/images/HeroModel2.png"
               alt="Sofia Dembitska"
               className="hero-image hero-image-right"
-            />
+            /> */}
           </div>
-        </div> */}
+        </div>
       </div>
       <ScrollArrow targetId="portfolio" />
     </div>
