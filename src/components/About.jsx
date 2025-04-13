@@ -8,9 +8,9 @@ const About = () => {
         <div className="flex flex-col md:flex-row gap-16 items-center">
           <div className="md:w-1/2">
             <img 
-              src="/images/AboutModel.jpg" 
+              src="/images/AboutModel2.jpg" 
               alt="About Sofia"
-              className="w-[450px] h-[600px] rounded-lg object-cover"
+              className="w-[450px] h-[600px] object-cover"
             />
           </div>
           <div className="md:w-1/2">
@@ -35,7 +35,7 @@ const About = () => {
         <h2 className="text-2xl font-bold mb-6">ABOUT ME</h2>
         <div className="mb-8">
           <img 
-            src="/images/AboutModel.jpg" 
+            src="/images/AboutModel2.jpg" 
             alt="About Sofia"
             className="w-full aspect-[3/4] object-cover rounded-lg"
           />
