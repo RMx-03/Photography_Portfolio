@@ -34,8 +34,9 @@ const Hero = () => {
           <div className="right-section w-1/2 relative">
             <div className="images-container">
               <img 
-                src="/images/Model.png"
+                src="/images/Model.webp"
                 alt="Sofia Dembitska"
+                loading="lazy"
                 className="hero-image hero-image-center"
               />
             </div>
@@ -75,8 +76,9 @@ const Hero = () => {
                 {/* Right Side - Image */}
                 <div className="w-2/3 relative">
                   <img 
-                    src="/images/Model.png"
+                    src="/images/Model.webp"
                     alt="Sofia Dembitska"
+                    loading="lazy"
                     className="h-full w-full object-cover object-center"
                   />
                 </div>

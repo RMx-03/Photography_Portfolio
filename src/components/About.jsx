@@ -9,8 +9,9 @@ const About = () => {
           <div className="md:w-1/2">
             <div className="overflow-hidden">
               <img 
-                src="/images/AboutModel2.jpg" 
+                src="/images/AboutModel2.webp" 
                 alt="About Sofia"
+                loading="lazy"
                 className="w-full h-[80vh] object-cover transform hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -37,8 +38,9 @@ const About = () => {
       <div className="md:hidden px-0">
         <div className="w-full">
           <img 
-            src="/images/AboutModel2.jpg" 
+            src="/images/AboutModel2.webp" 
             alt="About Sofia"
+            loading="lazy"
             className="w-full h-[60vh] object-cover"
           />
         </div>

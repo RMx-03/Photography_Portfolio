@@ -6,17 +6,17 @@ import ScrollArrow from './ScrollArrow'
 const categories = ['All', 'People', 'Architecture', 'Nature', 'Moments']
 
 const portfolioImages = [
-  { src: 'public/images/nature/casey-horner-4rDCa5hBlCs-unsplash.jpg', category: 'nature', size: 'normal', year: '2023' },
-  { src: '/images/architecture/lance-anderson-QdAAasrZhdk-unsplash.jpg', category: 'Architecture', size: 'normal', year: '2023' },
-  { src: '/images/people/katsiaryna-endruszkiewicz-BteCp6aq4GI-unsplash.jpg', category: 'People', size: 'tall', year: '2023' },
-  { src: '/images/moments/alef-morais-xhVMvxRYs2g-unsplash.jpg', category: 'Moments', size: 'normal', year: '2023' },
-  { src: '/images/nature/urban-vintage-78A265wPiO4-unsplash.jpg', category: 'Nature', size: 'normal', year: '2023' },
-  { src: '/images/moments/alex-alvarez-63YVMrL2d6g-unsplash.jpg', category: 'Moments', size: 'wide', year: '2023' },
-  { src: '/images/people/aiony-haust-owp8uQgoK8U-unsplash.jpg', category: 'People', size: 'normal', year: '2023' },  
-  { src: '/images/nature/jeremy-bishop-EwKXn5CapA4-unsplash.jpg', category: 'Nature', size: 'tall', year: '2023' },
-  { src: '/images/moments/aleksandar-andreev-zbUl3BLNjBM-unsplash.jpg', category: 'Moments', size: 'regular', year: '2023' },
-  { src: '/images/people/farol-106-WyT3qwO2c8s-unsplash.jpg', category: 'People', size: 'tall', year: '2023' },
-  { src: '/images/nature/florian-van-duyn-Dm-qxdynoEc-unsplash.jpg', category: 'Nature', size: 'regular', year: '2023' },
+  { src: '/images/nature/sebastian-unrau-CoD2Q92UaEg-unsplash.webp', category: 'Nature', size: 'normal', year: '2023' },
+  { src: '/images/architecture/lance-anderson-QdAAasrZhdk-unsplash.webp', category: 'Architecture', size: 'normal', year: '2023' },
+  { src: '/images/people/katsiaryna-endruszkiewicz-BteCp6aq4GI-unsplash.webp', category: 'People', size: 'tall', year: '2023' },
+  { src: '/images/moments/alef-morais-xhVMvxRYs2g-unsplash.webp', category: 'Moments', size: 'normal', year: '2023' },
+  { src: '/images/nature/urban-vintage-78A265wPiO4-unsplash.webp', category: 'Nature', size: 'normal', year: '2023' },
+  { src: '/images/moments/alex-alvarez-63YVMrL2d6g-unsplash.webp', category: 'Moments', size: 'wide', year: '2023' },
+  { src: '/images/people/aiony-haust-owp8uQgoK8U-unsplash.webp', category: 'People', size: 'normal', year: '2023' },  
+  { src: '/images/nature/clement-m-igX2deuD9lc-unsplash.webp', category: 'Nature', size: 'tall', year: '2023' },
+  { src: '/images/moments/aleksandar-andreev-zbUl3BLNjBM-unsplash.webp', category: 'Moments', size: 'regular', year: '2023' },
+  { src: '/images/people/farol-106-WyT3qwO2c8s-unsplash.webp', category: 'People', size: 'tall', year: '2023' },
+  { src: '/images/nature/florian-van-duyn-Dm-qxdynoEc-unsplash.webp', category: 'Nature', size: 'regular', year: '2023' },
 ]
 
 const Portfolio = () => {
@@ -70,6 +70,7 @@ const Portfolio = () => {
                   <img 
                     src={img.src} 
                     alt={`Portfolio ${index + 1}`} 
+                    loading="lazy"
                     className="w-full h-full object-cover aspect-video hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -134,6 +135,7 @@ const Portfolio = () => {
               <img 
                 src={img.src} 
                 alt={`Portfolio ${index + 1}`}
+                loading="lazy"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -173,6 +175,7 @@ const Portfolio = () => {
                 exit={{ opacity: 0, y: -20 }}
                 src={selectedImage.src}
                 alt="Selected portfolio"
+                loading="lazy"
                 className="max-h-full w-full object-contain"
               />
               <div className="absolute top-4 right-4 text-white text-sm">
