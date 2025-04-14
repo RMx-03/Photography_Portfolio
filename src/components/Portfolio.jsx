@@ -29,17 +29,23 @@ const Portfolio = () => {
     activeCategory === 'All' || img.category === activeCategory
   )
 
-  const handleImageClick = (image, index) => {
-    setSelectedImage(image)
-    setCurrentImageIndex(index)
+  const handleImageClick = (image, index, isMobile) => {
+    if (isMobile) {
+      setSelectedImage(image)
+      setCurrentImageIndex(index)
+    } else {
+      setSelectedImage(image)
+      setCurrentImageIndex(index)
+    }
   }
 
   const handleClose = () => {
     setSelectedImage(null)
+    setCurrentImageIndex(0)
   }
 
   const handlePrevious = (e) => {
-    e.stopPropagation()
+    e?.stopPropagation()
     setCurrentImageIndex((prev) => 
       prev === 0 ? filteredImages.length - 1 : prev - 1
     )
@@ -47,7 +53,7 @@ const Portfolio = () => {
   }
 
   const handleNext = (e) => {
-    e.stopPropagation()
+    e?.stopPropagation()
     setCurrentImageIndex((prev) => 
       prev === filteredImages.length - 1 ? 0 : prev + 1
     )
@@ -65,7 +71,7 @@ const Portfolio = () => {
                 <div 
                   key={index} 
                   className={`portfolio-item ${img.size} cursor-pointer overflow-hidden`}
-                  onClick={() => handleImageClick(img, index)}
+                  onClick={() => handleImageClick(img, index, false)}
                 >
                   <img 
                     src={img.src} 
@@ -104,7 +110,6 @@ const Portfolio = () => {
             </nav>
           </div>
         </div>
-        {/* <ScrollArrow targetId="about" /> */}
       </div>
 
       {/* Mobile Version */}
@@ -130,7 +135,7 @@ const Portfolio = () => {
             <div 
               key={index}
               className="masonry-item mb-4"
-              onClick={() => handleImageClick(img, index)}
+              onClick={() => handleImageClick(img, index, true)}
             >
               <img 
                 src={img.src} 
@@ -151,8 +156,73 @@ const Portfolio = () => {
         </div>
       </div>
 
-      <AnimatePresence>
-        {selectedImage && (
+      {/* Desktop Modal */}
+      <AnimatePresence mode="wait">
+        {selectedImage && !window.matchMedia('(max-width: 768px)').matches && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50"
+            onClick={handleClose}
+          >
+            <div className="h-screen flex flex-col" onClick={e => e.stopPropagation()}>
+              {/* Header */}
+              <div className="flex justify-between items-center p-8">
+                <span className="text-white text-lg">Dembitska</span>
+                <button 
+                  onClick={handleClose}
+                  className="text-white hover:text-gray-300 transition-colors"
+                >
+                  <FaTimes size={24} />
+                </button>
+              </div>
+
+              {/* Main Content */}
+              <div className="flex-1 relative flex items-center justify-center">
+                <button
+                  className="absolute left-8 text-white hover:text-gray-300 transition-colors"
+                  onClick={handlePrevious}
+                >
+                  <FaChevronLeft size={32} />
+                </button>
+                
+                <motion.img
+                  key={currentImageIndex}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.3 }}
+                  src={selectedImage.src}
+                  alt="Selected portfolio"
+                  className="max-w-[85%] max-h-[70vh] object-contain overflow-hidden"
+                />
+                
+                <button
+                  className="absolute right-8 text-white hover:text-gray-300 transition-colors"
+                  onClick={handleNext}
+                >
+                  <FaChevronRight size={32} />
+                </button>
+              </div>
+
+              {/* Footer */}
+              <div className="flex justify-between items-center p-8">
+                <div className="flex items-center gap-4">
+                  <span className="text-white text-lg font-light">{currentImageIndex + 1}</span>
+                  <div className="h-px w-12 bg-white/30"></div>
+                  <span className="text-white text-lg font-light">{filteredImages.length}</span>
+                </div>
+                <span className="text-white text-lg">{selectedImage.year}</span>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Modal */}
+      <AnimatePresence mode="wait">
+        {selectedImage && window.matchMedia('(max-width: 768px)').matches && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
