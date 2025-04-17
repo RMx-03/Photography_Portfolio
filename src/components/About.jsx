@@ -8,12 +8,18 @@ const About = () => {
         <div className="flex flex-col md:flex-row gap-16 items-center">
           <div className="md:w-1/2">
             <div className="overflow-hidden">
-              <img 
-                src="/images/AboutModel2.webp" 
-                alt="About Sofia"
-                loading="lazy"
-                className="w-full h-[80vh] object-cover transform hover:scale-105 transition-transform duration-500"
-              />
+              <div className="bg-white p-5 pb-28 m-6 md:m-12 shadow-lg border border-gray-800 hover:rotate-0 transition duration-500 -rotate-6 relative">
+                <img 
+                  src="/images/AboutModel2.webp" 
+                  alt="About Sofia"
+                  loading="lazy"
+                  className="smooth-edges flex flex-col aspect-square w-full h-[50vh] object-cover transform "
+                  // hover:scale-105 transition-transform duration-500
+                />
+                <div class="absolute bottom-0 left-0 right-0 text-center">
+                  <p class="text-gray-900 pb-7 h-full text-6xl font-nothingyoucoulddo">me</p>
+                </div>
+              </div>
             </div>
           </div>
           <div className="md:w-1/2 space-y-8">
