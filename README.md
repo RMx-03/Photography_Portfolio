@@ -12,7 +12,6 @@ A modern, responsive photography portfolio website built with **React (Vite)**, 
 - 🎨 **Tailwind CSS** – Utility-first CSS framework for efficient and customizable styling.
 - 📱 **Responsive Design** – Seamless experience across desktops, tablets, and mobile devices.
 - 🖼️ **Image Gallery** – Showcase your photography with a clean and organized layout.
-- 🌙 **Dark Mode Support** – Optional dark mode for better viewing in low-light environments.
 - 🚀 **Deployed on Vercel** – Easily accessible and shareable via a live URL.
 
 ---
